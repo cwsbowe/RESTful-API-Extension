@@ -1,0 +1,48 @@
+#studentInfo {
+    text-align: right;
+    float: right;
+    font-size: 12px;
+    margin-top: 0px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0px;
+    max-width: max-content;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+ol {
+    margin-top: 0px;
+}
+
+ul {
+    margin: 0px;
+}
+
+p {
+    margin: 2px;
+}
+
+code {
+    background-color: #eee;
+    border: 1px solid #999;
+    display: block;
+    padding: 10px;
+    line-height: 15px;
+    max-width: max-content;
+    margin: 8px;
+}
+
+table, th, td {
+    text-align: left;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}

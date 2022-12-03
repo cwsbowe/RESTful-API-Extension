@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+        <meta name="viewport" content="width-device-width, initial-scale-1.0"/>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <h1>COMP3220 REST Coursework 2022/23</h1>
+            <p id="studentInfo">Charlie Bowe 31590381</p>
+        </header>
+        <main>
+            <h2>Buildings</h2>
+            <p>Accepts: GET, PUT, PATCH, HEAD, OPTIONS</p>
+            <p>Example Request</p>
+            <code>GET http://comp3220.ecs.soton.ac.uk/buildings/$building_ID</code>
+            <p>Example Response</p>
+<pre><code>{
+    "id": "32",
+    "label":"EEE Buidling",
+    "uri": "http://comp3220.ecs.soton.ac.uk/buildings/32",
+    "lat": "50.93643",
+    "lon": "-1.39589",
+    "site": "999"
+    "image": "http://data.southampton.ac.uk/image-archive/buildings/200/32.jpg",
+    "rooms": "http://comp3220.ecs.soton.ac.uk/buildings/32/rooms"
+}</code></pre>
+            <h2>Rooms</h2>
+            <p>Accepts: GET, HEAD, OPTIONS</p>
+            <p>Example Input</p>
+            <code>GET http://comp3220.ecs.soton.ac.uk/buildings/$building_ID/rooms</code>
+            <p>Example Output</p>
+<pre><code>{
+    "id": "19",
+    "uri": "http://comp3220.ecs.soton.ac.uk/rooms/32/1015",
+    "building": "http://comp3220.ecs.soton.ac.uk/buildings/32",
+    "name": "32/1015",
+    "buildingpart": "room",
+    "level": 1,
+    "image": "http://data.southampton.ac.uk/image-archive/common-learning-spaces/200/8320105A.jpg",
+    "bookable": false
+}
+{
+    "id": "20",
+    "uri": "http://comp3220.ecs.soton.ac.uk/rooms/32/3001",
+    "building": "http://comp3220.ecs.soton.ac.uk/buildings/32",
+    "name": "32/3001",
+    "buildingpart": "room",
+    "level": 3,
+    "image": "",
+    "bookable": false
+}
+...</code></pre>
+            <p>Accepts: GET, PUT, PATCH, HEAD, OPTIONS</p>
+            <p>Example Input</p>
+            <code>GET http://comp3220.ecs.soton.ac.uk/rooms/$building_ID/$room_ID</code>
+            <p>Example Output</p>
+<pre><code>{
+    "id": "19",
+    "uri": "http://comp3220.ecs.soton.ac.uk/rooms/32/1015",
+    "building": "http://comp3220.ecs.soton.ac.uk/buildings/32",
+    "name": "32/1015",
+    "buildingpart": "room",
+    "level": 1,
+    "image": "http://data.southampton.ac.uk/image-archive/common-learning-spaces/200/8320105A.jpg",
+    "bookable": false
+}</code></pre>
+            <h2>Response Parameters</h2>
+            <table>
+                <tr>
+                    <th>URI Parameter</th>
+                    <th>Meaning</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>building_ID</td>
+                    <td>The building ID</td>
+                    <td>(int)</td>
+                </tr>
+                <tr>
+                    <td>room_ID</td>
+                    <td>The room ID</td>
+                    <td>(int)</td>
+                </tr>
+            </table>
+        </main>
+        <footer></footer>
+    </body>
+</html>

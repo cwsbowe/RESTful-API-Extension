@@ -1,0 +1,5 @@
+In the API there is a strong separation of concerns as the interface and data storage are largely kept separately from one another which allows for an improved portability and scalability, allowing compoents to evolve independently.
+The API also has a good stateless implementation as all requests are independent and not reliant on any other request. This aids the reliabilty and scalability of the API.
+The cachability of data used by the API could be improved, as little data is explicitly labelled as cacheable as required in order for data to be cached. This results in inefficiency as additional interactions are required.
+As well as this, the API does not provide a uniform interface, as multiple URIs are in different formats, resulting in an overcomplication of the interface as the implementations are not decoupled from the services
+The API does however use a good layered system with only immediate interactions between heirarchical layers, allowing layers to evolve independently of one another
